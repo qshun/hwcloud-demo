@@ -1,0 +1,24 @@
+spring:
+   datasource:
+      druid:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/sharding-demo?useSSL=false&useUnicode=true&characterEncoding=utf8
+        username: root
+        password: 1qaz2wsx
+        filter:
+          wall:
+            enabled: true
+          log4j2:
+            enabled: true
+          stat:
+            log-slow-sql: true
+            db-type: mysql
+            enabled: true
+            slow-sql-millis: 30000
+        stat-view-servlet:
+          login-username: admin
+          login-password: admin
+        name: ds001
+logging:
+  level:
+    root: info

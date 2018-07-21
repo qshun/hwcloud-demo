@@ -1,0 +1,15 @@
+spring:
+  profiles:
+    active:
+      - aop
+  jackson:
+      deserialization:
+        FAIL_ON_UNKNOWN_PROPERTIES: false
+      generator:
+        IGNORE_UNKNOWN: true
+      parser:
+        IGNORE_UNDEFINED: true
+      time-zone: GMT+08
+      default-property-inclusion: non_absent
+      date-format: yyyy-MM-dd HH:mm:ss
+
